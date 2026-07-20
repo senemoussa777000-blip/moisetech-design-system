@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoiseTech Design System</title>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) var(--spacing-lg);
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+            padding: var(--spacing-2xl);
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .hero h1 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .section {
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+        
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .component-showcase {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+        }
+        
+        .component-showcase h3 {
+            color: var(--accent-neon);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-lg);
+        }
+        
+        .demo-area {
+            background-color: var(--bg-dark);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .code-block {
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            font-family: var(--font-mono);
+            font-size: var(--font-size-sm);
+            overflow-x: auto;
+            color: var(--accent-neon);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO -->
+        <div class="hero">
+            <h1>🇸🇳 MoiseTech Design System</h1>
+            <p style="color: var(--text-secondary); font-size: var(--font-size-lg);">
+                Dark Premium Design System • Gold Accents • Cyberpunk Vibes
+            </p>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="section">
+            <h2>🔘 Buttons</h2>
+            <div class="components-grid">
+                <div class="component-showcase">
+                    <h3>Primary</h3>
+                    <div class="demo-area">
+                        <button class="btn btn-primary">Primary Button</button>
+                    </div>
+                    <div class="code-block">&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</div>
+                </div>
+                
+                <div class="component-showcase">
+                    <h3>Secondary</h3>
+                    <div class="demo-area">
+                        <button class="btn btn-secondary">Secondary Button</button>
+                    </div>
+                    <div class="code-block">&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;</div>
+                </div>
+                
+                <div class="component-showcase">
+                    <h3>Danger</h3>
+                    <div class="demo-area">
+                        <button class="btn btn-danger">Delete</button>
+                    </div>
+                    <div class="code-block">&lt;button class="btn btn-danger"&gt;Delete&lt;/button&gt;</div>
+                </div>
+                
+                <div class="component-showcase">
+                    <h3>Ghost</h3>
+                    <div class="demo-area">
+                        <button class="btn btn-ghost">Ghost Button</button>
+                    </div>
+                    <div class="code-block">&lt;button class="btn btn-ghost"&gt;Ghost&lt;/button&gt;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="section">
+            <h2>📦 Cards</h2>
+            <div class="components-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Card Title</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--text-secondary);">This is a sample card component with header, body, and footer sections.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" style="flex: 1;">Action</button>
+                        <button class="btn btn-ghost" style="flex: 1;">Cancel</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Feature Card</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--text-secondary);">Cards are responsive and hover-enabled for better UX.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" style="flex: 1;">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INPUTS -->
+        <div class="section">
+            <h2>⌨️ Form Elements</h2>
+            <div class="component-showcase">
+                <h3>Text Input</h3>
+                <div class="demo-area">
+                    <input type="text" class="input" placeholder="Enter text here..." style="max-width: 300px;">
+                </div>
+                <div class="code-block">&lt;input type="text" class="input" placeholder="..."&gt;</div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div style="text-align: center; padding: var(--spacing-2xl); border-top: 1px solid var(--border-color); margin-top: var(--spacing-2xl); color: var(--text-secondary);">
+            <p>MoiseTech Design System © 2026</p>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--spacing-md);">Made with ❤️ in Senegal 🇸🇳</p>
+        </div>
+    </div>
+</body>
+</html>
