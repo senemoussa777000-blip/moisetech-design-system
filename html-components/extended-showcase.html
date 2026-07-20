@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoiseTech Design System - Extended Components</title>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/extended-components.css">
+    <style>
+        .container { max-width: 1200px; margin: 0 auto; padding: var(--spacing-2xl) var(--spacing-lg); }
+        .section { margin-bottom: var(--spacing-2xl); }
+        .section h2 { color: var(--primary); margin-bottom: var(--spacing-lg); }
+        .components-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); }
+        .component-showcase { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--spacing-lg); }
+        .component-showcase h3 { color: var(--accent-neon); margin-bottom: var(--spacing-md); }
+        .demo-area { background-color: var(--bg-dark); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); display: flex; flex-wrap: wrap; gap: var(--spacing-md); align-items: center; justify-content: center; }
+        .code-block { background-color: var(--bg-dark); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--spacing-md); font-family: var(--font-mono); font-size: 11px; overflow-x: auto; color: var(--accent-neon); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align: center; margin-bottom: var(--spacing-2xl); padding: var(--spacing-2xl); border-bottom: 2px solid var(--primary);">
+            <h1 style="color: var(--primary); margin-bottom: var(--spacing-md);">🇸🇳 MoiseTech Design System - Extended</h1>
+            <p style="color: var(--text-secondary); font-size: var(--font-size-lg);">20+ Components Ready to Use</p>
+        </div>
+
+        <!-- BADGES -->
+        <div class="section">
+            <h2>🏷️ Badges</h2>
+            <div class="components-grid">
+                <div class="component-showcase">
+                    <h3>Primary</h3>
+                    <div class="demo-area"><span class="badge">NEW</span></div>
+                    <div class="code-block">&lt;span class="badge"&gt;NEW&lt;/span&gt;</div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Success</h3>
+                    <div class="demo-area"><span class="badge badge-success">ACTIVE</span></div>
+                    <div class="code-block">&lt;span class="badge badge-success"&gt;ACTIVE&lt;/span&gt;</div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Danger</h3>
+                    <div class="demo-area"><span class="badge badge-danger">ERROR</span></div>
+                    <div class="code-block">&lt;span class="badge badge-danger"&gt;ERROR&lt;/span&gt;</div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Warning</h3>
+                    <div class="demo-area"><span class="badge badge-warning">PENDING</span></div>
+                    <div class="code-block">&lt;span class="badge badge-warning"&gt;PENDING&lt;/span&gt;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOGGLES -->
+        <div class="section">
+            <h2>🎛️ Toggles</h2>
+            <div class="components-grid">
+                <div class="component-showcase">
+                    <h3>Toggle Off</h3>
+                    <div class="demo-area">
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="code-block">&lt;label class="toggle"&gt;&lt;input type="checkbox"&gt;&lt;span class="toggle-slider"&gt;&lt;/span&gt;&lt;/label&gt;</div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Toggle On</h3>
+                    <div class="demo-area">
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="code-block">&lt;input type="checkbox" checked&gt;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALERTS -->
+        <div class="section">
+            <h2>⚠️ Alerts</h2>
+            <div class="alert alert-success">
+                <span>✓</span>
+                <span>Success! Your action completed successfully.</span>
+            </div>
+            <div class="alert alert-danger">
+                <span>✕</span>
+                <span>Error! Something went wrong. Please try again.</span>
+            </div>
+            <div class="alert alert-warning">
+                <span>!</span>
+                <span>Warning! Please review your action.</span>
+            </div>
+            <div class="alert alert-info">
+                <span>i</span>
+                <span>Info: This is an informational message.</span>
+            </div>
+        </div>
+
+        <!-- TABS -->
+        <div class="section">
+            <h2>📑 Tabs</h2>
+            <div class="tabs">
+                <ul class="tab-buttons">
+                    <button class="tab-button active" onclick="switchTab(0)">Overview</button>
+                    <button class="tab-button" onclick="switchTab(1)">Settings</button>
+                    <button class="tab-button" onclick="switchTab(2)">Advanced</button>
+                </ul>
+            </div>
+            <div class="tab-content active">
+                <p style="color: var(--text-secondary);">This is the overview tab content.</p>
+            </div>
+            <div class="tab-content">
+                <p style="color: var(--text-secondary);">This is the settings tab content.</p>
+            </div>
+            <div class="tab-content">
+                <p style="color: var(--text-secondary);">This is the advanced tab content.</p>
+            </div>
+        </div>
+
+        <!-- FORMS -->
+        <div class="section">
+            <h2>📝 Form Elements</h2>
+            <div class="components-grid">
+                <div class="component-showcase">
+                    <h3>Checkbox</h3>
+                    <div class="demo-area">
+                        <div class="checkbox">
+                            <input type="checkbox" id="check1">
+                            <label for="check1">Accept terms</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Radio</h3>
+                    <div class="demo-area">
+                        <div class="radio">
+                            <input type="radio" name="option" id="radio1">
+                            <label for="radio1">Option 1</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Error State</h3>
+                    <div class="demo-area">
+                        <input type="text" class="input input-error" placeholder="Invalid input" style="max-width: 200px;">
+                    </div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Success State</h3>
+                    <div class="demo-area">
+                        <input type="text" class="input input-success" placeholder="Valid input" style="max-width: 200px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPINNERS -->
+        <div class="section">
+            <h2>⏳ Loading States</h2>
+            <div class="components-grid">
+                <div class="component-showcase">
+                    <h3>Small Spinner</h3>
+                    <div class="demo-area"><div class="spinner"></div></div>
+                </div>
+                <div class="component-showcase">
+                    <h3>Large Spinner</h3>
+                    <div class="demo-area"><div class="spinner spinner-large"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BREADCRUMBS -->
+        <div class="section">
+            <h2>🔗 Breadcrumbs</h2>
+            <div class="component-showcase">
+                <div class="breadcrumbs">
+                    <a href="#">Home</a>
+                    <span>/</span>
+                    <a href="#">Components</a>
+                    <span>/</span>
+                    <a href="#">Breadcrumbs</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding: var(--spacing-2xl); border-top: 1px solid var(--border-color); margin-top: var(--spacing-2xl); color: var(--text-secondary);">
+            <p>MoiseTech Design System v2.0 © 2026</p>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--spacing-md);">Made with ❤️ in Senegal 🇸🇳</p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(index) {
+            document.querySelectorAll('.tab-button').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('.tab-content').forEach((content, i) => {
+                content.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+</body>
+</html>
